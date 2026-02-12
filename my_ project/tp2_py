@@ -1,0 +1,13 @@
+from mpi4py import MPI
+import random
+import sys, io
+import numpy as np
+
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+taille = comm.Get_size()
+if rank ==0:
+ m= np.random.randint(1,100,(3,3))
+ print(m)
+
+
